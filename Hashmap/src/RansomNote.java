@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class RansomNote {
     public boolean canConstruct(String ransomNote, String magazine) {
         HashMap<Character, Integer> m_map = new HashMap<>();
 
@@ -20,7 +20,7 @@ class Solution {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Solution sol = new Solution();
+        RansomNote sol = new RansomNote();
 
         // 📥 Taking input
         System.out.print("Enter ransomNote: ");
