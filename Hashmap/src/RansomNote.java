@@ -1,23 +1,38 @@
-class RansomNote {
+import java.util.*;
+
+class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
-        // TODO: implement logic here
-        return false; // placeholder
+        HashMap<Character, Integer> m_map = new HashMap<>();
+
+        for (Character c : magazine.toCharArray()) {
+            m_map.put(c, m_map.getOrDefault(c, 0) + 1);
+        }
+
+        for (Character c : ransomNote.toCharArray()) {
+            if (!m_map.containsKey(c) || m_map.get(c) == 0) {
+                return false;
+            }
+            m_map.put(c, m_map.get(c) - 1);
+        }
+
+        return true;
     }
 
     public static void main(String[] args) {
-        RansomNote sol = new RansomNote();
+        Scanner sc = new Scanner(System.in);
+        Solution sol = new Solution();
 
-        // 🧪 Test Input Examples
-        String ransomNote1 = "a";
-        String magazine1 = "b";
-        System.out.println(sol.canConstruct(ransomNote1, magazine1)); // false
+        // 📥 Taking input
+        System.out.print("Enter ransomNote: ");
+        String ransomNote = sc.nextLine();
 
-        String ransomNote2 = "aa";
-        String magazine2 = "ab";
-        System.out.println(sol.canConstruct(ransomNote2, magazine2)); // false
+        System.out.print("Enter magazine: ");
+        String magazine = sc.nextLine();
 
-        String ransomNote3 = "aa";
-        String magazine3 = "aab";
-        System.out.println(sol.canConstruct(ransomNote3, magazine3)); // true
+        // ✅ Calling method and printing result
+        boolean result = sol.canConstruct(ransomNote, magazine);
+        System.out.println("Can construct: " + result);
+
+        sc.close();
     }
 }
