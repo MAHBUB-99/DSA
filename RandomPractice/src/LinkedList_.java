@@ -48,8 +48,6 @@ public class LinkedList_ {
         Node previous = null;
         Node next;
 
-
-
     }
     public static void main(String[] args) {
         LinkedList_ list = new LinkedList_();
