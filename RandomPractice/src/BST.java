@@ -132,6 +132,36 @@ public class BST {
         return successor;
     }
 
+    static Node getRightMost(Node root)
+    {
+        while(root.right!=null)
+        {
+            root=root.right;
+        }
+        return root;
+    }
+
+    static int getInOrderPredecassor(Node root, int data)
+    {
+        if(root == null)
+            return -1;
+        if(root.data == data && root.left!=null)
+            return getRightMost(root.left).data;
+        int predecessor = -1;
+        while(root!=null)
+        {
+            if(root.data < data)
+            {
+                predecessor = root.data;
+                root = root.right;
+            }
+            else
+            {
+                root = root.left;
+            }
+        }
+        return predecessor;
+    }
     public static void main(String[] args) {
         Node root = null;
 
@@ -161,6 +191,8 @@ public class BST {
         System.out.println(getMax(root));
 
         System.out.println("InOrder Successor: "+ getInOrderSuccessor(root,30));
+
+        System.out.println("InOrder Predecessor: "+ getInOrderPredecassor(root,30));
 
     }
 }
