@@ -104,11 +104,12 @@ public class BST {
 
     static Node getLeftMost(Node root)
     {
-        while(root.left!=null)
+        Node current = root;
+        while(current.left!=null)
         {
-            root = root.left;
+            current = current.left;
         }
-        return root.left;
+        return current;
     }
 
     static int getInOrderSuccessor(Node root,int data)
@@ -141,7 +142,7 @@ public class BST {
         return root;
     }
 
-    static int getInOrderPredecassor(Node root, int data)
+    static int getInOrderPredecessor(Node root, int data)
     {
         if(root == null)
             return -1;
@@ -162,6 +163,34 @@ public class BST {
         }
         return predecessor;
     }
+
+    static Node deleteNode(Node root, int data)
+    {
+        if(root == null)
+            return null;
+        else
+        {
+            if(root.left == null)
+                return root.right;
+            if(root.right == null)
+                return root.left;
+
+            if(data < root.data)
+                root.left = deleteNode(root.left,data);
+            else if(data > root.data)
+                root.right = deleteNode(root.right,data);
+            else
+            {
+
+                Node succ = getLeftMost(root.right);
+                System.out.println("Successor check: "+succ.data);
+                root.data = succ.data;
+                root.right = deleteNode(root.right,succ.data);
+            }
+        }
+        return root;
+    }
+
     public static void main(String[] args) {
         Node root = null;
 
@@ -190,9 +219,14 @@ public class BST {
         System.out.println(getMin(root));
         System.out.println(getMax(root));
 
-        System.out.println("InOrder Successor: "+ getInOrderSuccessor(root,30));
+        System.out.println("InOrder Successor of (30): "+ getInOrderSuccessor(root,30));
 
-        System.out.println("InOrder Predecessor: "+ getInOrderPredecassor(root,30));
+        System.out.println("InOrder Predecessor of (30): "+ getInOrderPredecessor(root,30));
 
+        deleteNode(root,30);
+        inorder(root);
+        System.out.println();
+        deleteNode(root,100);
+        inorder(root);
     }
 }
