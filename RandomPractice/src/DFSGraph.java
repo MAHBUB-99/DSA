@@ -1,24 +1,36 @@
 import java.util.*;
 public class DFSGraph {
 
-    public static ArrayList<Integer> DFSHelper(ArrayList<ArrayList<Integer>> adj,int s,boolean[] visited,ArrayList<Integer>result)
-    {
-        visited[s] = true;
-        result.add(s);
-        for(int n : adj.get(s))
-        {
-            if(!visited[n])
-            {
-                DFSHelper(adj,n,visited,result);
-            }
-        }
-        return result;
-    }
+//    public static ArrayList<Integer> DFSHelper(ArrayList<ArrayList<Integer>> adj,int s,boolean[] visited,ArrayList<Integer>result)
+//    {
+//        visited[s] = true;
+//        result.add(s);
+//        for(int n : adj.get(s))
+//            if(!visited[n])
+//                DFSHelper(adj,n,visited,result);
+//        return result;
+//    }
     public static ArrayList<Integer> DFS(ArrayList<ArrayList<Integer>>adj)
     {
         boolean []visited = new boolean[adj.size()];
         ArrayList<Integer> result = new ArrayList<>();
-        return DFSHelper(adj,0,visited,result);
+        Stack<Integer> stack = new Stack<>();
+//        return DFSHelper(adj,0,visited,result);
+        visited[0]=true;
+        stack.push(0);
+        while(!stack.isEmpty())
+        {
+            int curr = stack.pop();
+            result.add(curr);
+            for(int n : adj.get(curr))
+            {
+                if(!visited[n]) {
+                    visited[n] = true;
+                    stack.push(n);
+                }
+            }
+        }
+        return result;
     }
 
     public static void addEdge(ArrayList<ArrayList<Integer> > adj, int s, int t)
