@@ -12,11 +12,13 @@ public class DFSGraph {
 //    }
     public static ArrayList<Integer> DFS(ArrayList<ArrayList<Integer>>adj)
     {
-        boolean []visited = new boolean[adj.size()];
+//        boolean []visited = new boolean[adj.size()];
         ArrayList<Integer> result = new ArrayList<>();
+        HashSet<Integer> visited = new HashSet<>();
         Stack<Integer> stack = new Stack<>();
 //        return DFSHelper(adj,0,visited,result);
-        visited[0]=true;
+//        visited[0]=true;
+        visited.add(0);
         stack.push(0);
         while(!stack.isEmpty())
         {
@@ -24,8 +26,10 @@ public class DFSGraph {
             result.add(curr);
             for(int n : adj.get(curr))
             {
-                if(!visited[n]) {
-                    visited[n] = true;
+//                if(!visited[n]) {
+                if(!visited.contains(n)){
+//                    visited[n] = true;
+                    visited.add(n);
                     stack.push(n);
                 }
             }
