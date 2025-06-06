@@ -19,7 +19,7 @@ public class GenerateValidParenthesis {
         generate("", n, 0, 0);
         return result;
     }
-
+   
     public static void main(String[] args) {
         GenerateValidParenthesis obj = new GenerateValidParenthesis();
         int n = 3;
