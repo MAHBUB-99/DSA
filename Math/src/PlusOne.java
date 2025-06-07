@@ -17,7 +17,6 @@ public class PlusOne {
         int[] newDigits= new int[digits.length+1];
         newDigits[0] = 1;
         return newDigits;
-
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
