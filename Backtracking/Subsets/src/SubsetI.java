@@ -14,7 +14,7 @@ public class SubsetI {
         ans.add(nums[i]);
         findSubset(nums, ans, i + 1);
 
-        // Exclude nums[i] (backtrack)
+        // backtracking
         ans.remove(ans.size() - 1);
         findSubset(nums, ans, i + 1);
     }
@@ -35,3 +35,4 @@ public class SubsetI {
         }
     }
 }
+
