@@ -31,7 +31,6 @@ class PallindromeNumber {
         } else {
             System.out.println(number + " is not a palindrome.");
         }
-
         scanner.close();
     }
 }
