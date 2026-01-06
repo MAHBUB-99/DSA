@@ -87,6 +87,5 @@ public class Array {
 
         list3.display();
 
-
     }
 }
