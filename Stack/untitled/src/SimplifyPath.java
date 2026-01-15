@@ -21,7 +21,7 @@ class Solution {
                     }
                 }
             }
-        }
+        } 
         StringBuilder result = new StringBuilder();
         for(String c: stack)
         {
