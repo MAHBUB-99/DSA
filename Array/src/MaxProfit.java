@@ -5,7 +5,7 @@ class MaxProfit {
         for(int price : prices) {
             if(price < minPrice)
             {
-                minPrice = price;
+                minPrice = price; 
             }
             else
             {
