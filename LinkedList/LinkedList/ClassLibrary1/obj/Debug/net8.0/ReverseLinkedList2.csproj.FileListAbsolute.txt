@@ -1,0 +1,12 @@
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\bin\Debug\net8.0\ReverseLinkedList2.deps.json
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\bin\Debug\net8.0\ReverseLinkedList2.dll
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\bin\Debug\net8.0\ReverseLinkedList2.pdb
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\obj\Debug\net8.0\ReverseLinkedList2.GeneratedMSBuildEditorConfig.editorconfig
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\obj\Debug\net8.0\ReverseLinkedList2.AssemblyInfoInputs.cache
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\obj\Debug\net8.0\ReverseLinkedList2.AssemblyInfo.cs
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\obj\Debug\net8.0\ReverseLinkedList2.csproj.CoreCompileInputs.cache
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\obj\Debug\net8.0\ReverseLinkedList2.sourcelink.json
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\obj\Debug\net8.0\ReverseLinkedList2.dll
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\obj\Debug\net8.0\refint\ReverseLinkedList2.dll
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\obj\Debug\net8.0\ReverseLinkedList2.pdb
+F:\0.DSA\LinkedList\LinkedList\ClassLibrary1\obj\Debug\net8.0\ref\ReverseLinkedList2.dll
