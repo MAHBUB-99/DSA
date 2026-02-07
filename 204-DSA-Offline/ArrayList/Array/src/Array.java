@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collection;
-
+ 
 public class Array {
     private ArrayList<String> list;
     //Constructors
